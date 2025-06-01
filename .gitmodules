@@ -1,0 +1,10 @@
+[submodule "submodules/GET3D"]
+	path = submodules/GET3D
+	url = https://github.com/nv-tlabs/GET3D.git
+	ignore = untracked
+[submodule "submodules/nuscenes-devkit"]
+	path = submodules/nuscenes-devkit
+	url = https://github.com/nutonomy/nuscenes-devkit.git
+[submodule "src/inverse_rendering/GET3D"]
+	path = src/inverse_rendering/GET3D
+	url = https://github.com/nv-tlabs/GET3D.git

@@ -1,0 +1,98 @@
+{
+    "common_kwargs": {
+        "c_dim": 0,
+        "img_resolution": 1024,
+        "img_channels": 3
+    },
+    "scene_id": -1,
+    "start_idx": 1,
+    "stop_idx": 2,
+    "optim_kwargs": {
+        "type": "adams",
+        "lpips_kwargs": {
+            "net_type": "vgg",
+            "alpha": 20.0,
+            "tex_only": true,
+            "use_lpips": true
+        },
+        "tex_only_optim_adam": true,
+        "tex_only_optimizer_kwargs": {
+            "lr": 0.2
+        },
+        "learning_rate": 5e-05,
+        "resize_factor": 1,
+        "sample_factor": 1.0,
+        "num_chunks": 1,
+        "chunk_id": 0,
+        "optimize_w": true,
+        "opti_config_detect": {
+            "truncation_alpha_tex": 10,
+            "truncation_alpha_geo": 3,
+            "truncation_psi": 0.7,
+            "tex": {
+                "start": 0,
+                "end": 3,
+                "lr": 0.3
+            },
+            "sdf": {
+                "start": 3,
+                "end": 5,
+                "lr": 0.06
+            },
+            "R": {
+                "start": 3,
+                "end": 6,
+                "lr": 0.03
+            },
+            "T": {
+                "start": 3,
+                "end": 6,
+                "lr": 0.03
+            },
+            "S": {
+                "start": 3,
+                "end": 6,
+                "lr": 1e-06
+            },
+            "n_iters": 1,
+            "steps_in_iter": 6,
+            "early_stop": 6,
+            "w_volume": 0,
+            "w_latent_all": 0
+        },
+        "opti_config_update": {}
+    },
+    "data_kwargs": {
+        "dataset": "nuScenes",
+        "split": "mini",
+        "cameras": "ALL",
+        "img_resolution": 1024,
+        "img_channels": 3
+    },
+    "G_kwargs": {
+        "name": "GET3D",
+        "class_name": "GET3D.training.networks_get3d.GeneratorDMTETMesh",
+        "z_dim": 512,
+        "w_dim": 512,
+        "mapping_kwargs": {
+            "num_layers": 8
+        },
+        "iso_surface": "dmtet",
+        "one_3d_generator": true,
+        "n_implicit_layer": 1,
+        "deformation_multiplier": 1.0,
+        "use_style_mixing": true,
+        "dmtet_scale": 1.0,
+        "feat_channel": 16,
+        "mlp_latent_channel": 32,
+        "tri_plane_resolution": 256,
+        "n_views": 1,
+        "render_type": "neural_render",
+        "use_tri_plane": "true",
+        "tet_res": 90,
+        "geometry_type": "conv3d",
+        "data_camera_mode": "shapenet_car",
+        "channel_base": 32768,
+        "channel_max": 512
+    }
+}
