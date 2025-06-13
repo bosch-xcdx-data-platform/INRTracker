@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15659175.svg)](https://doi.org/10.5281/zenodo.15659175)
+
 # Towards Generalizable and Interpretable 3D Tracking with Inverse Neural Rendering
 
 We provide supplemental code to implement and run the multi-object tracking method presented in *Towards Generalizable and Interpretable Vision with Inverse Neural Rendering*. Following the steps below should produce qualitative result videos for all validation scenes (scene-0103, scene-0553, scene-0796, scene-916) in **nuScenes Mini**, a subset of 10 scenes from the official trainval split of the nuScenes dataset.
