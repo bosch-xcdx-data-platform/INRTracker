@@ -5,8 +5,8 @@
         "img_channels": 3
     },
     "scene_id": -1,
-    "start_idx": 1,
-    "stop_idx": 2,
+    "start_idx": 0,
+    "stop_idx": 1,
     "optim_kwargs": {
         "type": "adams",
         "lpips_kwargs": {
@@ -65,7 +65,7 @@
     "data_kwargs": {
         "dataset": "nuScenes",
         "split": "mini",
-        "cameras": "ALL",
+        "cameras": "ALL",  
         "img_resolution": 1024,
         "img_channels": 3
     },

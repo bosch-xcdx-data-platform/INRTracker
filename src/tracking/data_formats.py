@@ -659,6 +659,7 @@ class nuScenesTracking(Dataset):
         # print("Saved scene names to {}".format(os.path.join("data", "ablations", "nuscenes", "scene_names_{}_{}_{}.pkl".format(start_idx, stop_idx, version))))
         
         print("Loading scenes numbers {} to {}".format(start_idx, stop_idx))
+        print ("Number of scenes: {}".format(len(self.scene_names)))
         print("first scene name: {}".format(self.scene_names[0]))
         print("last scene name: {}".format(self.scene_names[-1]))
         if version == 'v1.0-test':
